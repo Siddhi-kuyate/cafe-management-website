@@ -1,0 +1,97 @@
+  /* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url(../img/3.3.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  width: 100%; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: fixed;
+  /* scroll-behavior: smooth; */
+ 
+}
+
+/* Centering the login form */
+.login-container {
+  background-color: transparent;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white; /* Dark red color */
+}
+
+/* Input fields styling */
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 14px;
+  color: white; /* A deeper red for labels */
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid white; /* Red border for input fields */
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: transparent;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: white; /* A slightly darker red for focus */
+}
+
+/* Button styling */
+.btn{
+  width: 500px;
+  padding: 10px; 
+  margin-left: 150px;
+  font-size: 15px;
+  /* background-color: #d32f2f; Primary red color */
+  text-decoration: none;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  /* cursor: pointer;
+  transition: background-color 0.3s ease; */
+}
+
+.btn-login:hover {
+  background-color: #c2185b; /* Darker red on hover */
+}
+
+/* Links styling */
+.links {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.links a {
+  color: white; /* Red color for links */
+  text-decoration: none;
+  font-size: 14px;
+  margin: 0 10px;
+}
+
+.links a:hover {
+  text-decoration: underline;
+  color: #c2185b; /* Darker red on hover */
+}

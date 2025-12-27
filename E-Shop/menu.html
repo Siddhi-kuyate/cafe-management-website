@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="a.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .menu {
+            padding: 10px 20px;
+            background-color: #F5F5F5;
+            text-align: center;
+        }
+
+        .menu-items {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .menu-item {
+            background-color: white;
+            width: 400px;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .menu-item img {
+            max-width: 300px;
+            height: 200px;
+            margin-bottom: 10px;
+        }
+
+        .menu-item button {
+            margin-top: 10px;
+            padding: 8px 15px;
+            background-color: #dc4348;
+            color: white;
+            width: 200px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+
+        .menu-item button:hover {
+            background-color: #8B3C65;
+        }
+
+        .view-cart {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #dc4348;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.2em;
+            cursor: pointer;
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div style="text-align: right; padding: 10px 20px;">
+            <span id="basket-icon" style="font-size: 1.5em; cursor: pointer;">
+                🧺 <span id="item-count">0</span>
+            </span>
+        </div>
+    </header>
+
+    <section id="menu" class="menu">
+        <h1 style="color: #dc4348; font-size: 50px;">E-shop 🛒</h1>
+        <div class="menu-items">
+            <!-- Item 1: Hot Coffee -->
+            <div class="menu-item">
+                <img src="../img/i.16.jpg" alt="Hot Coffee">
+                <h3>Hot Coffee</h3>
+                <p>Rich and bold coffee</p>
+                <p class="price">100rs/-</p>
+                <button onclick="addToCart('Hot Coffee', 100)">Add to Cart</button>
+            </div>
+        
+            <!-- Item 2: Hot Cocoa -->
+            <div class="menu-item">
+                <img src="../img/i.15.jpg" alt="Hot Cocoa">
+                <h3>Hot Cocoa</h3>
+                <p>Gourmet hot cocoa</p>
+                <p class="price">250rs/-</p>
+                <button onclick="addToCart('Hot Cocoa', 250)">Add to Cart</button>
+            </div>
+        
+            <!-- Item 3: Cold Coffee -->
+            <div class="menu-item">
+                <img src="../img/i.3.jpg" alt="Cold Coffee">
+                <h3>Cold Coffee</h3>
+                <p>Cold coffee with cream</p>
+                <p class="price">200rs/-</p>
+                <button onclick="addToCart('Cold Coffee', 200)">Add to Cart</button>
+            </div>
+        </div>
+        
+        <div class="menu-items">
+            <!-- Item 4: Cold Coffee with Ice Cream -->
+            <div class="menu-item">
+                <img src="../img/i.4.jpg" alt="Cold Coffee with Ice Cream">
+                <h3>Cold Coffee with Ice Cream</h3>
+                <p>Cold Coffee with Ice-cream</p>
+                <p class="price">150rs/-</p>
+                <button onclick="addToCart('Cold Coffee with Ice Cream', 150)">Add to Cart</button>
+            </div>
+        
+            <!-- Item 5: Special Coffee -->
+            <div class="menu-item">
+                <img src="../img/i.14.jpg" alt="Special Coffee">
+                <h3>Special Coffee</h3>
+                <p>CCD Special coffee</p>
+                <p class="price">250rs/-</p>
+                <button onclick="addToCart('Special Coffee', 250)">Add to Cart</button>
+            </div>
+        
+            <!-- Item 6: Brownie -->
+            <div class="menu-item">
+                <img src="../img/i.6.jpg" alt="Brownie">
+                <h3>Brownie</h3>
+                <p>Brownie with ice-cream</p>
+                <p class="price">200rs/-</p>
+                <button onclick="addToCart('Brownie', 200)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="menu-items">
+            <!-- Item 7: Momos -->
+            <div class="menu-item">
+                <img src="../img/i.18.jpg" alt="Hot Coffee">
+                <h3>Momos</h3>
+                <p>Rich and bold coffee</p>
+                <p class="price">100rs/-</p>
+                <button onclick="addToCart('Momos', 100)">Add to Cart</button>
+            </div>
+        
+            <!-- Item 8: pizza  -->
+            <div class="menu-item">
+                <img src="../img/i.17.jpg" alt="Hot Cocoa">
+                <h3>Pizza</h3>
+                <p>Gourmet hot cocoa</p>
+                <p class="price">200rs/-</p>
+                <button onclick="addToCart('pizza', 200)">Add to Cart</button>
+            </div>
+        
+            <!-- Item 9: french fries -->
+            <div class="menu-item">
+                <img src="../img/i.13.jpg" alt="Cold Coffee">
+                <h3>French Fries</h3>
+                <p>Cold coffee with cream</p>
+                <p class="price">100rs/-</p>
+                <button onclick="addToCart('French Fries', 100)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="menu-items">
+            <!-- Item 10: Bargar-->
+            <div class="menu-item">
+                <img src="../img/i.12.jpg" alt="Cold Coffee with Ice Cream">
+                <h3>Bargar</h3>
+                <p>Cold Coffee with Ice-cream</p>
+                <p class="price">150rs/-</p>
+                <button onclick="addToCart('Bargar', 150)">Add to Cart</button>
+            </div>
+        
+            <!-- Item 11: Hot Dog-->
+            <div class="menu-item">
+                <img src="../img/i.11.jpg" alt="Special Coffee">
+                <h3>Hot Dog</h3>
+                <p>CCD Special coffee</p>
+                <p class="price">200rs/-</p>
+                <button onclick="addToCart('Hot Dog', 200)">Add to Cart</button>
+            </div>
+        
+            <!-- Item 12: Sandwich -->
+            <div class="menu-item">
+                <img src="../img/i.10.jpg" alt="Brownie">
+                <h3>Sandwich</h3>
+                <p>Brownie with ice-cream</p>
+                <p class="price">200rs/-</p>
+                <button onclick="addToCart('Sandwich', 200)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="menu-items">
+            <!-- Item 13: Chocolate Ice Cream-->
+            <div class="menu-item">
+                <img src="../img/i.9.jpg" alt="Cold Coffee with Ice Cream">
+                <h3>Chocolate Ice Cream</h3>
+                <p>Cold Coffee with Ice-cream</p>
+                <p class="price">100rs/-</p>
+                <button onclick="addToCart('Chocolate Ice Cream', 100)">Add to Cart</button>
+            </div>
+        
+            <!-- Item 14: Strawberry Ice Cream-->
+            <div class="menu-item">
+                <img src="../img/i.8.jpg" alt="Special Coffee">
+                <h3>Strawberry Ice Cream</h3>
+                <p>CCD Special coffee</p>
+                <p class="price">150rs/-</p>
+                <button onclick="addToCart('Strawberry Ice Cream', 150)">Add to Cart</button>
+            </div>
+        
+            <!-- Item 15: Vanilla Ice Cream -->
+            <div class="menu-item">
+                <img src="../img/i.7.jpg" alt="Brownie">
+                <h3>Vanilla Ice Cream</h3>
+                <p>Brownie with ice-cream</p>
+                <p class="price">200rs/-</p>
+                <button onclick="addToCart('Vanilla Ice Cream', 200)">Add to Cart</button>
+            </div>
+        </div>
+
+
+        <div class="menu-items">
+            <!-- Item 16: Hot Coffee -->
+            <div class="menu-item">
+                <img src="../img/cheescake.jpeg" alt="cheescake">
+                <h3>Cheescake</h3>
+                <p>Rich and bold cheescake</p>
+                <p class="price">100rs/-</p>
+                <button onclick="addToCart('cheescake', 100)">Add to Cart</button>
+            </div>
+        
+            <!-- Item 17: Hot Cocoa -->
+            <div class="menu-item">
+                <img src="../img/sweet.jpeg" alt="Hot Cocoa">
+                <h3>sweet</h3>
+                <p>Gourmet sweet</p>
+                <p class="price">250rs/-</p>
+                <button onclick="addToCart('sweet', 250)">Add to Cart</button>
+            </div>
+        
+            <!-- Item 18: Cold Coffee -->
+            <div class="menu-item">
+                <img src="../img/cafe.jpeg" alt="Cold Coffee">
+                <h3>Tea Ban</h3>
+                <p>Tea ban with cream</p>
+                <p class="price">150rs/-</p>
+                <button onclick="addToCart('Tea Ban', 150)">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Repeat this pattern for all other items in your menu -->
+        
+                
+        <a href="bill.html" class="view-cart">View Cart & Bill</a>
+        </section>
+
+        <script>
+            // Function to update the basket count
+            function updateBasketCount() {
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                const itemCount = cart.reduce((total, item) => total + item.quantity, 0);
+                document.getElementById('item-count').textContent = itemCount;
+            }
+        
+            function addToCart(name, price) {
+                // Retrieve cart from localStorage or initialize it
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        
+                // Check if item is already in the cart
+                let item = cart.find(item => item.name === name);
+                if (item) {
+                    item.quantity += 1;
+                } else {
+                    cart.push({ name, price, quantity: 1 });
+                }
+        
+                // Save cart back to localStorage
+                localStorage.setItem('cart', JSON.stringify(cart));
+        
+                // Update basket count
+                updateBasketCount();
+        
+                alert(`${name} has been added to your cart.`);
+            }
+        
+            // Initialize basket count on page load
+            document.addEventListener('DOMContentLoaded', updateBasketCount);
+        </script>
+        
+</body>
+</html>

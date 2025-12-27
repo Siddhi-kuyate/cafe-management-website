@@ -1,0 +1,86 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8d7da; /* Light red background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.forgot-password-form h2 {
+    text-align: center;
+    color: #c82333; /* Dark red color */
+    margin-bottom: 20px;
+}
+
+.forgot-password-form p {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #721c24; /* Slightly lighter red for text */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #c82333; /* Red label color */
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #c82333; /* Red border color */
+    border-radius: 4px;
+    background-color: #f8d7da; /* Light red background for input */
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #c82333; /* Red button background */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #721c24; /* Darker red on hover */
+}
+
+p a {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #c82333; /* Red link color */
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         /* Bill Styling */
+         .bill {
+            text-align: left;
+            margin: 20px auto;
+            padding: 20px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            width: 60%;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: 1.1em;
+        }
+
+        .bill h2 {
+            text-align: center;
+            color: #dc4348;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .bill p {
+            margin: 8px 0;
+            font-size: 1em;
+            font-weight: bold;
+        }
+
+        .bill-details {
+            padding: 15px;
+            background: #f4f4f4;
+            border-radius: 10px;
+        }
+
+        .bill .logo {
+            display: block;
+            width: 100px;
+            margin: 0 auto 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="bill" id="bill">
+        <img src="../img/logo1.png" alt="Company Logo" class="logo">
+        <h2>BILL</h2>
+        <div class="bill-details">
+            <p id="bill-customer-name"></p>
+            <p id="bill-customer-email"></p>
+            <p id="bill-customer-phone"></p>
+            <p id="bill-customer-address"></p>
+            <p id="bill-date"></p>
+            <p id="bill-total"></p>
+        </div>
+    </div>
+   <script>
+       document.addEventListener('DOMContentLoaded', function () {
+    const customerDetails = JSON.parse(localStorage.getItem('customerDetails')) || {};
+
+    if (customerDetails.name) {
+        document.getElementById('bill-customer-name').textContent = 'Name: ' + customerDetails.name;
+        document.getElementById('bill-customer-email').textContent = 'Email: ' + customerDetails.email;
+        document.getElementById('bill-customer-phone').textContent = 'Phone: ' + customerDetails.phone;
+        document.getElementById('bill-customer-address').textContent = 'Address: ' + customerDetails.address;
+        document.getElementById('bill-date').textContent = 'Date: ' + customerDetails.date;
+        document.getElementById('bill-total').textContent = customerDetails.total;
+    } else {
+        document.querySelector('.bill-details').innerHTML = "<p>No bill found. Please generate again.</p>";
+    }
+});
+
+   </script>
+</body>
+</html>
